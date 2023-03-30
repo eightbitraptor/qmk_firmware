@@ -22,6 +22,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_ECTL CTL_T(KC_ESC)
 #define KC_QCTL RCTL_T(KC_QUOT)
 
+#define NUM(n) KC_ ## n
+#define SWAY_n(n) LGUI(NUM(n))
+#define SWAY_Mn(n) LSG(NUM(n))
+
+#define SWAY_OM LSG(KC_O)
+
+#define SWAY_1 SWAY_n(1)
+#define SWAY_2 SWAY_n(2)
+#define SWAY_3 SWAY_n(3)
+#define SWAY_4 SWAY_n(4)
+#define SWAY_5 SWAY_n(5)
+#define SWAY_6 SWAY_n(6)
+#define SWAY_7 SWAY_n(7)
+#define SWAY_8 SWAY_n(8)
+#define SWAY_9 SWAY_n(9)
+
+#define SWAY_M1 SWAY_Mn(1)
+#define SWAY_M2 SWAY_Mn(2)
+#define SWAY_M3 SWAY_Mn(3)
+#define SWAY_M4 SWAY_Mn(4)
+#define SWAY_M5 SWAY_Mn(5)
+#define SWAY_M6 SWAY_Mn(6)
+#define SWAY_M7 SWAY_Mn(7)
+#define SWAY_M8 SWAY_Mn(8)
+#define SWAY_M9 SWAY_Mn(9)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -62,11 +88,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      QK_BOOT, SWAY_OM,  SWAY_1,  SWAY_2,  SWAY_3, XXXXXXX,                      XXXXXXX, SWAY_M1, SWAY_M2, SWAY_M3, SWAY_OM, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      RGB_TOG, XXXXXXX,  SWAY_4,  SWAY_5,  SWAY_6, XXXXXXX,                      XXXXXXX, SWAY_M4, SWAY_M5, SWAY_M6, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      RGB_MOD, RGB_HUD,  SWAY_7,  SWAY_8,  SWAY_9, XXXXXXX,                      XXXXXXX, SWAY_M7, SWAY_M8, SWAY_M9, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______,   MO(3), _______,    _______,   MO(3), _______
                                       //`--------------------------'  `--------------------------'
