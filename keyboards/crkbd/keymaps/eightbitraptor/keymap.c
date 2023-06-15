@@ -48,6 +48,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SWAY_M8 SWAY_Mn(8)
 #define SWAY_M9 SWAY_Mn(9)
 
+#define SWAY_DR LGUI(KC_D)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -88,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, SWAY_OM,  SWAY_1,  SWAY_2,  SWAY_3, XXXXXXX,                      XXXXXXX, SWAY_M1, SWAY_M2, SWAY_M3, SWAY_OM, XXXXXXX,
+      QK_BOOT, SWAY_OM,  SWAY_1,  SWAY_2,  SWAY_3, XXXXXXX,                      XXXXXXX, SWAY_M1, SWAY_M2, SWAY_M3, SWAY_OM, SWAY_DR,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, XXXXXXX,  SWAY_4,  SWAY_5,  SWAY_6, XXXXXXX,                      XXXXXXX, SWAY_M4, SWAY_M5, SWAY_M6, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
